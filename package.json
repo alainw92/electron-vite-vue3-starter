@@ -7,13 +7,15 @@
    "scripts": {
       "dev": "electron-forge start",
       "dev:browser": "vite",
+      "build:test": "vite build",
       "build": "electron-forge package",
+      "preview": "npm run build:test && vite preview",
       "make": "electron-forge make",
       "publish": "electron-forge publish",
       "lint": "eslint --ext .ts,.tsx .",
       "test:unit": "vitest",
-      "test:e2e": "start-server-and-test preview http://localhost:2222 'cypress run --e2e'",
-      "test:e2e:dev": "start-server-and-test 'vite dev --port 4173' http://localhost:2222 'cypress open --e2e'"
+      "test:e2e": "start-server-and-test preview http://localhost:2201 'cypress run --e2e'",
+      "test:e2e:dev": "start-server-and-test 'vite dev --port 2201' http://localhost:2201 'cypress open --e2e'"
    },
    "keywords": [],
    "author": {
